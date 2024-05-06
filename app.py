@@ -24,7 +24,6 @@ def handle_text(message):
 def gen(input):
     genai.configure(api_key=gemini_key)
 
-    # Set up the model
     generation_config = {
         "temperature": 1,
         "top_p": 0.95,
@@ -63,7 +62,7 @@ def gen(input):
         return convo.last.text
     except Exception as e:
         print(e)
-        return "Sorry, I couldn't understand that. Please try again."
+        return "Sorry, I encountered with a problem. Please wait a bit and try again."
 
 
 if __name__ == "__main__":
